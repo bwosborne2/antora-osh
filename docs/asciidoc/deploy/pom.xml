@@ -63,6 +63,10 @@
                            <token>\.html</token>
                            <value>\.php</value>
                         </replacement>
+                        <replacement>
+                           <token>footer.php</token>
+                           <value>footer.html</value>
+                        </replacement>
                      </replacements>
                   </configuration>
                </execution>
