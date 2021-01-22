@@ -36,6 +36,7 @@
                               <include>**/*.woff</include>
                               <include>**/*.woff2</include>
                               <include>**/*.svg</include>
+                              <include>**/*.ico</include>
                            </includes>
                         </resource>
                      </resources>
