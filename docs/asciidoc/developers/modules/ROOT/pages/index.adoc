@@ -13,7 +13,7 @@ We aim to support an open progressive community - both for users and developers.
 image:change_request_process.png[Process]
 
 
-To go with this, we try to work to the following principals -:
+To go with this, we try to work to the following principles -:
 
 * Time is important! RFCs and PRs will be processed in a timely manner. RFCs and issues that are not updated after a reasonable period will be marked as _stale_ and will be closed if not updated. They can of course be re-opened if further information is available, and important issues may be _pinned_ so this policy is waived, but we want to keep things moving, and feel the worst thing we can do is leave things open forever as no-one knows what is happening.
 
