@@ -1,0 +1,245 @@
+= Configuration Descriptions
+
+== Overview
+
+Specific services or bindings usually require a configuration to be operational in a meaningful way.
+To visualize or validate concrete configuration properties, configuration descriptions should be provided.
+All available configuration descriptions are accessible through the `org.opensmarthouse.core.config.core.ConfigDescriptionRegistry` service.
+
+Although configuration descriptions are usually specified in a declarative way (as described in this section), they can also be provided as `org.opensmarthouse.core.config.ConfigDescriptionProvider`.
+Any `ConfigDescriptionProvider`s must be registered as service at the _OSGi_ service registry.
+The full Java API for configuration descriptions can be found in the Java package `org.opensmarthouse.core.config.core`.
+In addition to this there is a `org.opensmarthouse.config.core.validation.ConfigDescriptionValidator` that can be used to validate a set of configuration parameters against their declarations in the configuration description before the actual configuration is updated with the new configuration parameters.
+
+Configuration descriptions must be placed as XML file(s) (with the ending `.xml`) in the bundle's folder `/OH-INF/config/`.
+
+== Device Specific Configuration
+
+Configuration parameters having the `parameter.device-properties` element are considered to be parameters that are handled remotely from the _OpenSmartHouse_ software configuration - i.e. they are parameters that configure a physical device.
+
+== Formatting Labels
+
+The label and descriptions for things, channels and config descriptions should follow the following format.
+The label should be short so that for most UIs it does not spread across multiple lines.
+The description can contain longer text to describe the thing in more detail.
+Limited use of HTML tags is permitted to enhance the description - if a long description is provided, the first line should be kept short and a line break (```<br>```) should be placed at the end of the line to allow UIs to display a short description in limited space.
+
+Configuration options should be kept short so that they are displayable on a single line in most UIs.
+If you want to provide a longer description of the options provided by a particular parameter, then this should be placed into the ```<description>``` of the parameter to keep the option label short.
+The description can include limited HTML to enhance the display of this information.
+
+The following HTML tags are allowed -: ```<b>, <br>, <em>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <i>, <p>, <small>, <strong>, <sub>, <sup>, <ul>, <ol>, <li>```.
+These must be inside the XML escape sequence. - eg.
+```
+<description><![CDATA[ HTML marked up text here ]]></description>
+```
+
+== XML Structure for Configuration Descriptions
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<config-description:config-descriptions
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:config-description="https://opensmarthouse.org/schemas/config-description/v1.0.0"
+    xsi:schemaLocation="https://opensmarthouse.org/schemas/config-description/v1.0.0
+        https://opensmarthouse.org/schemas/config-description-1.0.0.xsd">
+
+  <config-description uri="{binding|thing-type|channel-type|any_other}:bindingID:...">
+    <parameter-group name="String">
+      <label>String</label>
+      <description>String</description>
+      <context>String</context>
+      <advanced>{true|false}</advanced>
+    </parameter-group>
+
+    <parameter name="String" type="{text|integer|decimal|boolean}" min="Decimal" max="Decimal" step="Decimal" pattern="String" required="{true|false}" readOnly="{true|false}" multiple="{true|false}" groupName="String" unit="A|cd|K|kg|m|mol|s|g|rad|sr|Hz|N|Pa|J|W|C|V|F|Ω|S|Wb|T|H|Cel|lm|lx|Bq|Gy|Sv|kat|m/s2|m2v|m3|kph|%|l|ms|min|h|d|week|y">
+      <context>{network-address|serial-port|password|password-create|color|date|datetime|email|month|week|dayOfWeek|time|tel|url|item|thing|group|tag|service|channel|rule|location}</context>
+      <required>{true|false}</required>
+      <default>String</default>
+      <label>String</label>
+      <description>String</description>
+      <unitLabel>String</unitLabel>
+      <options>
+        <option value="String">String</option>
+      </options>
+      <filter>
+        <criteria name="String">String</criteria>
+      </filter>
+
+      <device-properties>
+        <property name="parameter">12</property>
+        <property name="size">2</property>
+      </device-properties>
+    </parameter>
+  </config-description>
+
+  <config-description uri="{binding|thing-type|channel-type|any_other}:bindingID:...">
+    ...
+  </config-description>
+...
+</config-description:config-descriptions>
+```
+|===
+| *Property*         | *Description* 
+|config-description.uri | The URI of this description within the ConfigDescriptionRegistry (mandatory)
+| parameter | The description of a concrete configuration parameter (optional).
+|parameter.name | The name of the configuration parameter (mandatory).
+| parameter.type | The data type of the configuration parameter (mandatory).
+| parameter.min 
+  | The minimal value for numeric types, or the minimal length of strings. Note that the value of any options may be outside of this value (optional).
+| parameter.max 
+  | The maximum value for numeric types, or the maximum length of strings. Note that the value of any options may be outside of this value (optional).
+| parameter.step | The value granularity for a numeric value (optional).
+| parameter.pattern | The regular expression for a text type (optional).
+| parameter.required | Specifies whether the value is required (optional).
+| parameter.readOnly | Specifies whether the value is read-only (optional).
+| parameter.multiple | Specifies whether multiple selections of options are allowed (optional).
+| parameter.groupName | Sets a group name for this parameter (optional).
+| parameter.unit 
+  | Specifies the unit of measurements. The unit declaration in the parameter definition shown above contains the set of valid units. The unit must only be set if the type of the parameter is either integer or decimal (optional).
+| parameter.device-properties 
+  | Specifies properties that link this parameter to the physical device. When this element is specified the parameter is considered to be a device parameter and may be treated differently than parameters which do not have this element which are expected to be ThingHandler configuration only.
+| advanced | Specifies that this is an advanced parameter. Advanced parameters may be hidden by a UI (optional).
+| verify 
+  | Specifies that this is parameter requires a verification stage with the user before sending. Parameters flagged with _verify=true_ could be considered dangerous and should be protected from accidental use by a UI - e.g. by adding an "Are you sure" prompt (optional).
+| context | The context of the configuration parameter (optional).
+| required 
+  | The flag indicating if the configuration parameter has to be set or not (deprecated, optional, default: false).
+| default 
+  | The default value of the configuration parameter (optional). If `multiple` is true you can define a list of default values, separating them by a comma (`,`).
+| label | A human-readable label for the configuration parameter (optional).
+| description | A human-readable description for the configuration parameter (optional).
+| unitLabel | 
+  The unit label represents a human-readable label for the unit. It can also be used to provide unit labels for natural language units as iterations, runs, etc. The unit label must only be set if the type of the parameter is either integer or decimal (optional).
+| option | The element definition of a static selection list (optional).
+| option.value 
+  | The value of the selection list element. Note that the value may be outside of the range specified in the min/max if this is specified.
+| multipleLimit | If `multiple` is true, sets the maximum number of options that can be selected (optional).
+| limitToOptions 
+  | If true (default) will only allow the user to select items in the options list. If false, will allow the user to enter other text (optional).
+| criteria | The filter criteria for values of a dynamic selection list (optional).
+| <td>criteria.name</td><td>The name of the context related filter.
+|===
+
+=== Supported Contexts
+
+Context is used to provide some semantic details about the parameter.
+The UIs use it to render different kind of input widgets.
+The following contexts require a specific format of the content:
+
+|===
+| Name | Type | Format | Sample implementation
+| network-address | text | IPv4,IPv6, domain name | ```<input type="text"/>```
+| serial-port | text | Serial port name, e.g. COM1 | custom input field
+| password | text | alphanumeric characters | ```<input type="password"/>```
+| password-create | text | alphanumeric characters | custom password input
+| color | text | #000000 - #ffffff (hex color) | ```<input type="color"/>```
+| date | text | YYYY-MM-DD | ```<input type="date"/>```
+| datetime | text | YYYY-MM-DD hh:mm | custom input field
+| email | text | username@domain.com | ```<input type="email"/>```
+| month | text | month of year | custom input field
+| week | integer | week of year | custom input field
+| dayOfWeek | text | MON, TUE, WED, THU, FRI, SAT, SUN | custom input field
+| time | text/integer | hh:mm:ss/milliseconds since epoch | ```<input type="time"/>```
+| telephone | text | telephone number | custom input field
+| url | text | web url | ```<input type="url"/>```
+| item | text | Item name | custom input field
+| thing | text | UID of a thing | custom input field
+| group | text | group name to which this parameter belongs |
+| tag | text | tag name | custom input field
+| service | text | service name | custom input field
+| channel | text | UID of a channel | custom input field
+| rule | text | UID of a rule | custom input field
+| location | text | latitude,longitude[,altitude] | custom input field
+|===
+
+Further, the *item* context can contain criteria to filter the list of items. For example:
+
+```xml
+<filter>
+  <criteria name="type">Switch,Dimmer</criteria>
+  <criteria name="tag">Light,Heating</criteria>
+</filter>
+```
+
+In the case of above filter only those items will be shown that satisfy the filter's conditions.
+The above filter is evaluated as follows: 
+
+```
+(type=Switch OR type=Dimmer) AND (tag=Light OR tag=Heating) 
+
+```
+Similarly, the *Channel* context can contain criteria to filter channels based on *kind* field.
+The value of *kind* can either be STATE or TRIGGER.
+For example:
+
+```xml
+<filter>
+  <criteria name="kind">STATE|TRIGGER</criteria>
+</filter>
+```
+
+Groups allow parameters to be grouped together into logical blocks so that the user can find the parameters they are looking for.
+A parameter can be placed into a group so that the UI knows how to display the information.
+
+|===
+| *Property* | *Description*
+| group.name 
+  | The group name - this is used to link the parameters into the group, along with the groupName option in the parameter (mandatory).
+| label       | The human-readable label of the group. (mandatory).
+| description | The description of the group. (optional).
+| context 
+  | Sets a context tag for the group. The context may be used in the UI to provide some feedback on the type of parameters in this group (optional).
+| advanced | Specifies that this is an advanced group. The UI may hide this group from the user (optional).
+|===
+
+The full XML schema for configuration descriptions is specified in the https://opensmarthouse.org/schemas/config-description-1.0.0.xsd[OpenSmartHouse config description XSD] file.
+
+*Hints:*
+
+- Although the attribute `uri` is optional, it _must_ be specified in configuration description files.
+Only for embedded configuration descriptions in documents for binding definitions and `Thing` type descriptions, the attribute is optional.
+
+== Example
+
+The following code gives an example for one configuration description.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<config-description:config-description uri="thing-type:my-great-binding:my-bridge-name"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:config-description="https://opensmarthouse.org/schemas/config-description/v1.0.0"
+    xsi:schemaLocation="https://opensmarthouse.org/schemas/config-description/v1.0.0
+        https://opensmarthouse.org/schemas/config-description-1.0.0.xsd">
+
+  <parameter-group name="connection">
+    <label>Connection</label>
+    <description>Connection settings.</description>
+  </parameter-group>
+
+  <parameter-group name="authentication">
+    <label>Authentication</label>
+    <description>Authentication settings.</description>
+  </parameter-group>
+
+  <parameter name="ipAddress" type="text" required="true" groupName="connection">
+    <context>network-address</context>
+    <label>Network Address</label>
+    <description>Network address of the device.</description>
+  </parameter>
+
+  <parameter name="port" type="integer" min="0" max="65535" multiple="true" groupName="connection">
+    <label>Port</label>
+    <default>80,443,8080</default>
+  </parameter>
+
+  <parameter name="userName" type="text" required="true" groupName="authentication">
+    <label>User Name</label>
+  </parameter>
+
+  <parameter name="password" type="text" required="false" groupName="authentication">
+    <context>password</context>
+  </parameter>
+
+</config-description:config-description>
+```

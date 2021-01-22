@@ -1,0 +1,16 @@
+name: osh-dev-docs
+title: Developers Guide
+version: master
+nav:
+- modules/ROOT/nav.adoc
+- modules/fundamentals/nav.adoc
+- modules/architecture/nav.adoc
+- modules/buildsystem/nav.adoc
+- modules/discovery/nav.adoc
+- modules/bindings/nav.adoc
+- modules/automation/nav.adoc
+- modules/persistence/nav.adoc
+- modules/audio/nav.adoc
+- modules/transformations/nav.adoc
+- modules/extensionservices/nav.adoc
+- modules/utils/nav.adoc

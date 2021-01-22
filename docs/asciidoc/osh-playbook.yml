@@ -1,0 +1,20 @@
+site:
+  title: OpenSmartHouse
+  start_page: osh-dev-docs::index.adoc 
+content:
+  sources: 
+  - url: ../..
+    branches: HEAD
+    start_path: docs/asciidoc/developers
+ui: 
+  bundle:
+    url: ./antora-ui-default/build/ui-bundle.zip
+  supplemental_files: ./supplemental-ui
+
+runtime:
+  fetch: true
+
+output:
+  dir: /xampp/htdocs/site
+  clean: true
+  

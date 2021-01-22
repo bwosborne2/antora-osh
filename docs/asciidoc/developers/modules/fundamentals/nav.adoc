@@ -1,0 +1,6 @@
+* xref:index.adoc[Fundamental Concepts]
+** xref:things.adoc[Things]
+** xref:items.adoc[Items]
+** xref:categories.adoc[Categories]
+** xref:profiles.adoc[Profiles]
+** xref:units_of_measurement.adoc[Units of Measurement]

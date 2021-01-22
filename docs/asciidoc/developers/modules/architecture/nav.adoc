@@ -1,0 +1,7 @@
+* xref:index.adoc[System Architecture]
+** OSGi Fundamentals
+*** xref:osgi:index.adoc[Overview]
+*** xref:osgi:osgids.adoc[Declarative Services]
+*** xref:osgi:configadmin.adoc[Configuration Admin]
+*** xref:osgi:eventadmin.adoc[Event Admin]
+*** xref:osgi:equinox.adoc[Equinox]

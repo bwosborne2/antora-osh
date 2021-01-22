@@ -1,0 +1,146 @@
+= Categories
+
+== Categories
+
+Categories in _OpenSmartHouse_ are used to provide meta information about Things, Channels, etc. UIs can use this information to render specific icons or provide a search functionality to for example filter all Things for a certain category.
+
+== Differences between categories
+
+We separate the categories into `functional` and `visual`.
+Therefore we treat `Thing categories` as how the physical device *looks like* and `Channel categories` as something that describes the *functional purpose* of the Channel.
+
+== Thing Categories
+
+The Thing type definition allows to specify a category.
+User interfaces can parse this category to get an idea how to render this Thing.
+A Binding can classify each Thing into one of the existing categories.
+The list of all predefined categories can be found in our categories overview:
+
+|===
+| Category | Description | Icon Example
+| Battery  | Batteries, Energy | image:iconsets/classic/battery.png[battery]
+| Blinds   | Roller shutters, window blinds, etc. | image:iconsets/classic/blinds.png[blinds]
+| Camera   | All kinds of cameras | image:iconsets/classic/camera.png[camera]
+| Car      | Smart Cars   | image:iconsets/classic/garage_detached_selected.png[detached garage]
+| CleaningRobot | Vacuum robots, mopping robots, etc. | 
+| Door     | Door         | image:iconsets/classic/door.png[door] 
+| FrontDoor | Front Door | image:iconsets/classic/frontdoor.png[front door]  
+| GarageDoor | Garage Door | image:iconsets/classic/garagedoor.png[garage door]
+| HVAC     | Air condition devices, Fans | image:iconsets/classic/fan_ceiling.png[ceiling fan]
+| Inverter | Power inverter, such as solar inverters etc. 
+  | image:iconsets/classic/solarplant.png[solar plant] 
+| LawnMower | Lawn mowing robots, etc. | image:iconsets/classic/lawnmower.png[grass]
+| Lightbulb | Devices that illuminate something, such as bulbs, etc. 
+  | image:iconsets/classic/lightbulb.png[light bulb]
+| Lock     | Devices whose primary pupose is locking something 
+  | image:iconsets/classic/lock.png[lock]
+| MotionDetector   | Motion sensors/detectors |
+| NetworkAppliance 
+  | Bridges/Gateway need to access other devices like used by Philips Hue for example, Routers, Switches 
+  | image:iconsets/classic/network.png[network]
+| PowerOutlet 
+  | Small devices to be plugged into a power socket in a wall which stick there                          
+    | image:iconsets/classic/poweroutlet.png[power outlet]
+| Projector  | Devices that project a picture somewhere | image:iconsets/classic/projector.png[projector]
+| RadiatorControl | Controls on radiators used to heat up rooms | image:iconsets/classic/radiator.png[radiator]
+| Receiver 
+  | Audio/Video receivers, i.e. radio receivers, satelite or cable receivers, recorders, etc.            
+  | image:iconsets/classic/receiver.png[receiver]
+| Screen | Devices that are able to show a picture | image:iconsets/classic/screen.png[screen]
+| Sensor | Device used to measure something |
+| Siren  | Siren used by Alarm systems | image:iconsets/classic/siren.png[siren]
+| SmokeDetector    | Smoke detectors |
+| Speaker          | Devices that are able to play sounds |
+| WallSwitch  
+  | Any device attached to the wall that controls a binary status of something, for ex. a light switch   
+  | image:iconsets/classic/wallswitch.png[wall switch]
+| WebService       | Account with credentials for a website |
+| Window           | Window | image:iconsets/classic/window.png[window]
+| WhiteGood        | Devices that look like Waschingmachines, Dishwashers, Dryers, Fridges, Ovens, etc.         
+  | image:iconsets/classic/whitegood.png[white good]
+|===
+
+=== Channel Group Categories
+
+Channel Groups can be seen as a kind of `sub-device` as they combine certain (physical) abilities of a `Thing` into one. For such `Group Channels` one can set a category from the `Thing` category list.
+
+=== Channel Categories
+
+The Channel type definition allows to specify a category.
+A Binding should classify each Channel into one of the existing categories or leave the category blank, if there is no good match.
+There are different types of categories for Channels, which are listed below.
+
+==== Widgets
+
+|===
+| Category      | Icon Example                             
+| Colorpicker   | image:iconsets/classic/colorpicker.png[colour wheel]
+| Number        |                                          
+| Rollershutter | image:iconsets/classic/rollershutter.png[roller shutter]  
+| Slider        | image:iconsets/classic/slider.png[]         
+| Switch        | image:iconsets/classic/switch.png[switch]        
+| Text          | image:iconsets/classic/text.png[text]           
+| Group         | image:iconsets/classic/group.png[]         
+|===
+
+==== Weather
+
+|===
+| Category    | Icon Example                          
+| Sun         | image:iconsets/classic/sun.png[sun]          
+| Moon        | image:iconsets/classic/moon.png[moon]         
+| Clouds      |                                        
+| Sun_Clouds  | image:iconsets/classic/sun_clouds.png[sun and clouds]   
+| Rain        | image:iconsets/classic/rain.png[rain]         
+| Snow        | image:iconsets/classic/snow.png[show]         
+| Wind        | image:iconsets/classic/wind.png[wind]         
+| Humidity    | image:iconsets/classic/humidity.png[humidity]     
+| Temperature | image:iconsets/classic/temperature.png[temperature]  
+|===
+
+==== Properties
+
+|===
+| Category         | Icon Example                                
+| BatteryLevel     | image:iconsets/classic/batterylevel.png[battery]     
+| LowBattery       | image:iconsets/classic/lowbattery.png[low battery]       
+| CarbonDioxide    | image:iconsets/classic/carbondioxide.png[carbon dioxide]    
+| Energy           | image:iconsets/classic/energy.png[energy]           
+| Gas              | image:iconsets/classic/gas.png[gas]              
+| Oil              | image:iconsets/classic/oil.png[oil]              
+| Water            | image:iconsets/classic/water.png[water]            
+| Light            | image:iconsets/classic/light.png[light]            
+| ColorLight       | image:iconsets/classic/colorlight.png[colour wheel]       
+| Temperature      | image:iconsets/classic/temperature.png[temperaure]      
+| Smoke            | image:iconsets/classic/smoke.png[smoke]            
+| SoundVolume      | image:iconsets/classic/soundvolume.png[loudspeaker]      
+| Pressure         | image:iconsets/classic/pressure.png[pressure]         
+| Fire             | image:iconsets/classic/fire.png[fire]             
+| Motion           | image:iconsets/classic/motion.png[motion]           
+| QualityOfService | image:iconsets/classic/qualityofservice.png[] 
+| Moisture         |                                            
+| Noise            |                                            
+| Flow             | image:iconsets/classic/flow.png[flow]             
+| Price            | image:iconsets/classic/price.png[piggybank]            
+| Time             | image:iconsets/classic/time.png[clock]             
+|===
+
+==== Control
+
+|===
+| Category     | Icon Example                           
+| Heating      | image:iconsets/classic/heating.png[heating]      
+| MediaControl | image:iconsets/classic/mediacontrol.png[movie film] 
+| MoveControl  | image:iconsets/classic/movecontrol.png[move control]  
+| Zoom         | image:iconsets/classic/zoom.png[magnifying glass]         
+|===
+
+==== Purpose
+
+|===
+| Category | Icon Example                       
+| Alarm    | image:iconsets/classic/alarm.png[alarm]   
+| Presence | image:iconsets/classic/presence.png[presence]
+| Vacation | image:iconsets/classic/vacation.png[vacation]
+| Party    | image:iconsets/classic/party.png[party]   
+|===

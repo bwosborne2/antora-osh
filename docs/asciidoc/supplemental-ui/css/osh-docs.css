@@ -1,0 +1,44 @@
+/* Hide h1 used for Header text */
+h1 {
+  display:none
+}
+
+/* Display Header text */
+#headertext {
+  display: block;
+}
+
+
+/* Center images */
+img {
+  display: block !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Table styling */
+table, th, td {
+  vertical-align: top;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 80%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+tr:nth-child(even) {
+  background: #aae9a6;
+}
+
+/* Code blocks */
+pre {
+  font-weight: bold;
+  border: 5px solid #ddd;
+}
+

@@ -1,0 +1,8 @@
+*  Bindings
+** xref:index.adoc[Overview]
+** xref:binding-xml.adoc[XML Reference]
+** xref:thing-xml.adoc[Thing & Channel XML Reference]
+** xref:config-xml.adoc[Configuration Descriptions]
+** xref:faq.adoc[FAQ]
+** xref:notification_events.adoc[Notification Events]
+** xref:provisioning.adoc[Provisioning and Discovery]
