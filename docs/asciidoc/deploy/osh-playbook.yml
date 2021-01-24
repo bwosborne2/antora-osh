@@ -15,6 +15,6 @@ runtime:
   fetch: true
 
 output:
-  dir: /xampp/htdocs/site
+  dir: site
   clean: true
   
