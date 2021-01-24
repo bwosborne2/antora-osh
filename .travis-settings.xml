@@ -3,6 +3,9 @@
   <servers>
     <server>
       <id>tty</id>
+      <configuration>
+        <StrictHostKeyChecking>no</StrictHostKeyChecking>
+      </configuration>
       <username>${env.FREESHELL_USER}</username>
         <password>${env.FREESHELL_PASS}</password>
     </server>
