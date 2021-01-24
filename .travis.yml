@@ -7,19 +7,15 @@ jdk: openjdk11
 cache:
   directories:
   - $HOME/.m2
+ 
+ before_script:
+  - cp .travis.settings.xml $HOME/.m2/settings.xml
+  - git checkout master
   
 script: 
 - cd docs/asciidoc/deploy
 - mvn install
 
-before_deploy:
-  - cp .travis.settings.xml $HOME/.m2/settings.xml
-  - git checkout master
- 
-deploy:
-  skip_cleanup: true
-  provider: script
-  script: mvn install
   
   branches:
   only:
