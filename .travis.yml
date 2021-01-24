@@ -8,9 +8,9 @@ cache:
   directories:
   - $HOME/.m2
   
-before_install:
-  - cd java
-  
+script:
+- mvn install
+
 before_deploy:
   - cp .travis.settings.xml $HOME/.m2/settings.xml
   - git checkout master
