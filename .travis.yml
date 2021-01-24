@@ -7,14 +7,12 @@ jdk: openjdk11
 cache:
   directories:
   - $HOME/.m2
-  
-before_install:
-  - echo "MAVEN_OPTS='-Xms1g -Xmx2g'" > ~/.mavenrc
+
   
 before_deploy:
   - cp .travis.settings.xml $HOME/.m2/settings.xml
   - git checkout master
-  - cd $TRAVIS_BUILD_DIR/docs/asciidoc/deploy
+  - cd docs/asciidoc/deploy
 deploy:
   skip_cleanup: true
   provider: script
