@@ -17,6 +17,5 @@ before_deploy:
   - cd docs/asciidoc/deploy
   
 deploy:
-  skip_cleanup: true
   provider: script
   script: mvn install
