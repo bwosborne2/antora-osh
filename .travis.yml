@@ -13,6 +13,7 @@ script:
 
 before_deploy:
   - git checkout master
+  - md $HOME/.m2
   - cp .travis.settings.xml $HOME/.m2/settings.xml
   - cd docs/asciidoc/deploy
   
