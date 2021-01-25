@@ -9,12 +9,10 @@ cache:
   - $HOME/.m2
 
 script:
-  - cp .travis.settings.xml $HOME/.m2/settings.xml
-  - cd docs/asciidoc/deploy
-  - mvn clean
+  - mvn --version
 
 before_deploy:
-
+  - cp .travis.settings.xml $HOME/.m2/settings.xml
   - cd docs/asciidoc/deploy
   - git checkout master
 
