@@ -63,25 +63,6 @@
          </execution>
       </executions>      
       </plugin>
-      <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-antrun-plugin</artifactId>
-         <version>1.8</version>
-         <executions>
-            <execution>
-               <id>wait</id>
-               <phase>process-sources</phase>
-               <configuration>
-                  <target>
-                     <sleep seconds="2" />
-                  </target>
-               </configuration>
-               <goals>
-                  <goal>run</goal>
-               </goals>
-            </execution>
-         </executions>
-         </plugin>
          <plugin>
             <artifactId>maven-resources-plugin</artifactId>
             <version>3.1.0</version>
