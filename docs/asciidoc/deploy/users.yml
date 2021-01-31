@@ -1,0 +1,19 @@
+site:
+  title: OpenSmartHouse
+  start_page: users::index.adoc 
+content:
+  sources: 
+  - url: .
+    branches: HEAD
+    start_path: users
+
+ui: 
+  bundle:
+    url: https://github.com/bwosborne2/antora-osh/blob/master/docs/asciidoc/antora-ui-default/build/ui-bundle.zip?raw=true
+  supplemental_files: ./supplemental-ui
+
+runtime:
+  fetch: true
+
+output:
+  dir: site/users

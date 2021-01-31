@@ -1,0 +1,7 @@
+= Welcome to OpenSmartHouse!
+
+== Overview
+
+_OpenSmartHouse_ is a Smart Building automation framework. The documentation found here aims to support developers wishing to understand the framework to add functionality to the core, or extend the functionality through bindings that interface to hardware, or those that wish to integrate the framework within a wider system.
+
+_OpenSmartHouse_ is written in Java - this provides a portable system that can be deployed to a wide range of hardware. It is also running within an OSGi container - this provides services that allow parts of the framework to interact, and for parts of the system to be modified or upgraded.

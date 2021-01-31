@@ -5,7 +5,9 @@
   "main": "to-php.js",
   "scripts": {
     "start": "node to-php",
-    "antora": "antora osh-playbook.yml"
+    "developers": "antora developers.yml",
+    "users": "antora users.yml",
+    "process": "antora process.yml"
   },
   "author": "",
   "license": "ISC",
