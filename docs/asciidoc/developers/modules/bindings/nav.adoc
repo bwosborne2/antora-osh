@@ -1,4 +1,4 @@
-*  Bindings
+*  {nbsp}{nbsp}{nbsp}{nbsp}Bindings
 ** xref:index.adoc[Overview]
 ** xref:binding-xml.adoc[XML Reference]
 ** xref:thing-xml.adoc[Thing & Channel XML Reference]

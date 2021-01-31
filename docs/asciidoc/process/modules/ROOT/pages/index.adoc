@@ -1,0 +1,7 @@
+= Overview
+
+== Overview
+
+The purpose of this guide is both a way for somebody to quickly deploy the _OpenSmartHouse_ project if needed and to give an understanding of the reasons and design principles behind the process choices.
+
+WARNING: This document and the processes are very much in flux both for design and implementation. Corrections & enhancements are welcome.

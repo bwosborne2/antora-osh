@@ -1,0 +1,32 @@
+= Summary
+
+== Summary
+
+This section contains a _tl:dr_ summary for those needing to quickly learn how to deploy _OpenSmartHouse_.
+
+NOTE: This process is currently executed by Travis-ci upon detecting changes in the current development repo for docs. It is anticipated this process will be included into the Travis build process for OSHC.
+
+=== Prerequisites
+[%interactive]
+* [ ] Install JDK 11
+* [ ] Install Maven
+* [ ] Copy the contents of the `deploy` folder into your local working directory.
+
+=== Process
+You just need to run `mvn install`. 
+
+== POM Details
+Here is the current process from POM.xml.
+
+. Install Node.js and NPM (Node Package manager)
+. Install Antora
+. Process developer documentation to html
+. Process user documentation to html
+. Process process documentation to html
+. Convert all internal references to `.html` to `.php`
+. Copy non-html files to the final target directory tree.
+. Copy html files to the target tree, renaming to ``.php` (footer.html is just copied)
+. Upload processed documentation to the website
+
+== TODO
+* Use Maven Exec plugin to run `rclone sync` using sftp as output?
