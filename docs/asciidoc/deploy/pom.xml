@@ -40,7 +40,8 @@
             <configuration>
                <arguments>install @antora/cli@2.3 @antora/site-generator-default@2.3</arguments>
             </configuration>
-         </execution> 
+         </execution>
+         <execution> 
             <id>run Antora developers</id>
             <phase>generate-sources</phase>
             <goals>
@@ -50,7 +51,7 @@
                <arguments>run-script developers</arguments>
             </configuration>
          </execution>  
-                  <execution>
+         <execution>
             <id>run Antora users</id>
             <phase>generate-sources</phase>
             <goals>
@@ -60,6 +61,7 @@
                <arguments>run-script users</arguments>
             </configuration>
          </execution> 
+         <execution>
             <id>rename html to php</id>
             <phase>compile</phase>
             <goals>
