@@ -1,6 +1,6 @@
 = MT02646 Home Control Metering Plug
 
-This describes the Z-Wave device _MT02646_, manufactured by _Devolo_ with the thing type UID of ---- devolo_mt02646_00_000 ----.
+This describes the Z-Wave device _MT02646_, manufactured by _Devolo_ with the thing type UID of ```devolo_mt02646_00_000```.
 
 The device is in the category of _Power Outlet_, defining Small devices to be plugged into a power socket in a wall which stick there.
 
