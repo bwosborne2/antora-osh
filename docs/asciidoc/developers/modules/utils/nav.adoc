@@ -1,3 +1,4 @@
-* Utilities
-** xref:events.adoc[Event Bus]
-** xref:tools.adoc[Framework Tools]
+.Utilities
+* xref:i18n.adoc[Internationalization]
+* xref:events.adoc[Event Bus]
+* xref:tools.adoc[Framework Tools]
