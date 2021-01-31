@@ -304,10 +304,10 @@ Association group 1 supports 1 node.
 
 === Documentation Links
 
-* [English User Manual](https://opensmarthouse.org/zwavedatabase/1/reference/Manual-devolo-Home-Control-Metering-Plug-com.pdf)
-* [TZE96 manual](https://opensmarthouse.org/zwavedatabase/1/reference/TZE96-manual.pdf)
+* https://opensmarthouse.org/zwavedatabase/1/reference/Manual-devolo-Home-Control-Metering-Plug-com.pdf[English User Manual]
+* https://opensmarthouse.org/zwavedatabase/1/reference/TZE96-manual.pdf[TZE96 manual]
 
 '''
 
 Did you spot an error in the above definition or want to improve the content?
-You can [contribute to the database here](https://opensmarthouse.org/zwavedatabase/1).
+You can https://opensmarthouse.org/zwavedatabase/1[contribute to the database here].
