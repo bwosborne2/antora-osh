@@ -51,6 +51,10 @@
                <arguments>run-script developers</arguments>
             </configuration>
          </execution>  
+<<<<<<< HEAD
+         <execution>
+            <id>run Antora users</id>
+=======
          <execution>
             <id>run Antora users</id>
             <phase>generate-sources</phase>
@@ -59,6 +63,21 @@
             </goals>
             <configuration>
                <arguments>run-script users</arguments>
+            </configuration>
+         </execution> 
+         <execution>
+            <id>run Antora process</id>
+>>>>>>> a49fb9597983ee371d81939f94b0c869cfe9ab4a
+            <phase>generate-sources</phase>
+            <goals>
+               <goal>npm</goal>
+            </goals>
+            <configuration>
+<<<<<<< HEAD
+               <arguments>run-script users</arguments>
+=======
+               <arguments>run-script process</arguments>
+>>>>>>> a49fb9597983ee371d81939f94b0c869cfe9ab4a
             </configuration>
          </execution> 
          <execution>
