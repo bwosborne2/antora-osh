@@ -136,7 +136,7 @@
                      <goal>upload</goal>
                   </goals>
                   <configuration>
-                     <skip>true</skip>
+                     <optimize>true</optimize>
                      <fromDir>target/site</fromDir>
                      <includes>**/*.*</includes>
                      <serverId>tty</serverId>
