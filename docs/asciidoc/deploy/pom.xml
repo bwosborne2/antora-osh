@@ -62,6 +62,16 @@
             </configuration>
          </execution> 
          <execution>
+            <id>run Antora process</id>
+            <phase>generate-sources</phase>
+            <goals>
+               <goal>npm</goal>
+            </goals>
+            <configuration>
+               <arguments>run-script process</arguments>
+            </configuration>
+         </execution> 
+         <execution>
             <id>rename html to php</id>
             <phase>compile</phase>
             <goals>
