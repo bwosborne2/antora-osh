@@ -8,6 +8,15 @@ h1 {
   display: block;
 }
 
+/* Breadcrumbs & Navbar */
+.toolbar, .nav {
+  background: rgb(195, 239, 192);
+}
+
+/* Hide explore panel */
+.nav-panel-explore {
+  display: none;
+}
 
 /* Center images */
 img {
