@@ -1,6 +1,6 @@
 name: developers
 title: Developers Guide
-version: 0.9.1
+version: master
 nav:
 - modules/ROOT/nav.adoc
 - modules/fundamentals/nav.adoc

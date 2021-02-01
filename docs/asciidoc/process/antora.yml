@@ -1,6 +1,6 @@
 name: process
 title: Process Guide
-version: 0.9.1
+version: master
 nav:
 - modules/ROOT/nav.adoc
 - modules/documentation/nav.adoc
