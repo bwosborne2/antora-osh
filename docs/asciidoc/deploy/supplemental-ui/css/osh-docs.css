@@ -9,7 +9,7 @@ h1 {
 }
 
 /* Breadcrumbs & Navbar */
-.toolbar .nav {
+.toolbar, .nav {
   background: rgb(195, 239, 192);
 }
 
