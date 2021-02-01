@@ -106,7 +106,7 @@ These must be inside the XML escape sequence. - eg.
 | required 
   | The flag indicating if the configuration parameter has to be set or not (deprecated, optional, default: false).
 | default 
-  | The default value of the configuration parameter (optional). If `multiple` is true you can define a list of default values, separating them by a comma (`,`).
+  | The default value of the configuration parameter (optional). If ```multiple``` is true you can define a list of default values, separating them by a comma (```,```).
 | label | A human-readable label for the configuration parameter (optional).
 | description | A human-readable description for the configuration parameter (optional).
 | unitLabel | 
@@ -114,7 +114,7 @@ These must be inside the XML escape sequence. - eg.
 | option | The element definition of a static selection list (optional).
 | option.value 
   | The value of the selection list element. Note that the value may be outside of the range specified in the min/max if this is specified.
-| multipleLimit | If `multiple` is true, sets the maximum number of options that can be selected (optional).
+| multipleLimit | If ```multiple``` is true, sets the maximum number of options that can be selected (optional).
 | limitToOptions 
   | If true (default) will only allow the user to select items in the options list. If false, will allow the user to enter other text (optional).
 | criteria | The filter criteria for values of a dynamic selection list (optional).
