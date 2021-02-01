@@ -13,6 +13,11 @@ h1 {
   background: rgb(195, 239, 192);
 }
 
+/* Hide explore panel */
+.nav-panel-explore {
+  display: none;
+}
+
 /* Center images */
 img {
   display: block !important;
