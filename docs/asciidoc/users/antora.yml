@@ -1,5 +1,5 @@
 name: users
 title: Users Guide
-version: master
+version: 0.9.1
 nav:
 - modules/ROOT/nav.adoc
