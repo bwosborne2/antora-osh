@@ -8,6 +8,10 @@ h1 {
   display: block;
 }
 
+/* Breadcrumbs */
+.toolbar {
+  background: rgb(195, 239, 192);
+}
 
 /* Center images */
 img {
