@@ -8,8 +8,8 @@ h1 {
   display: block;
 }
 
-/* Breadcrumbs */
-.toolbar {
+/* Breadcrumbs & Navbar */
+.toolbar .nav {
   background: rgb(195, 239, 192);
 }
 
