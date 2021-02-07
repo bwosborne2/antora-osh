@@ -47,7 +47,7 @@ table {
 }
 
 tr:nth-child(even) {
-  background: #aae9a6;
+  background: rgb(195, 239, 192);
 }
 
 /* Code blocks */
