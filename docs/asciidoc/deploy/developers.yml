@@ -4,7 +4,7 @@ site:
 content:
   sources: 
   - url: https://github.com/bwosborne2/antora-osh.git
-    branches: master
+    branches: ui-bundle
     tags: v*
     start_path: docs/asciidoc/developers
 
