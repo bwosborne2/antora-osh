@@ -10,7 +10,7 @@ content:
 
 ui: 
   bundle:
-    url: https://github.com/bwosborne2/antora-osh/blob/master/docs/asciidoc/antora-ui-default/build/ui-bundle.zip?raw=true
+    url: ../osh-ui/build/ui-bundle.zip
   supplemental_files: ./supplemental-ui
 
 runtime:
