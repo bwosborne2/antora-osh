@@ -10,7 +10,7 @@ content:
 
 ui: 
   bundle:
-    url: ../osh-ui/build/ui-bundle.zip
+    url: https://github.com/bwosborne2/antora-osh/blob/master/docs/asciidoc//osh-ui/build/ui-bundle.zip?raw=true
 
 runtime:
   fetch: true
