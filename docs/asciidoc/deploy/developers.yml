@@ -1,5 +1,5 @@
 site:
-  title: OpenSmartHouse
+  title: OpenSmartHouse Developers Guide
   start_page: developers::index.adoc 
 content:
   sources: 
