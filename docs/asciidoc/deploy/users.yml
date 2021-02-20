@@ -1,5 +1,5 @@
 site:
-  title: OpenSmartHouse
+  title: OpenSmartHouse Users Guide
   start_page: users::index.adoc 
 content:
   sources: 
@@ -10,8 +10,7 @@ content:
 
 ui: 
   bundle:
-    url: https://github.com/bwosborne2/antora-osh/blob/master/docs/asciidoc/antora-ui-default/build/ui-bundle.zip?raw=true
-  supplemental_files: ./supplemental-ui
+    url: https://github.com/bwosborne2/antora-osh/blob/master/docs/asciidoc//osh-ui/build/ui-bundle.zip?raw=true
 
 runtime:
   fetch: true

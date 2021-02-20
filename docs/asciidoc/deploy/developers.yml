@@ -1,17 +1,16 @@
 site:
-  title: OpenSmartHouse
+  title: OpenSmartHouse Developers Guide
   start_page: developers::index.adoc 
 content:
   sources: 
   - url: https://github.com/bwosborne2/antora-osh.git
-    branches: master
+    branches: ui-bundle
     tags: v*
     start_path: docs/asciidoc/developers
 
 ui: 
   bundle:
-    url: https://github.com/bwosborne2/antora-osh/blob/master/docs/asciidoc/antora-ui-default/build/ui-bundle.zip?raw=true
-  supplemental_files: ./supplemental-ui
+    url: https://github.com/bwosborne2/antora-osh/blob/master/docs/asciidoc//osh-ui/build/ui-bundle.zip?raw=true
 
 runtime:
   fetch: true
