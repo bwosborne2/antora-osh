@@ -1,6 +1,6 @@
 /* Hide h1 used for Header text */
 h1 {
-  display:none
+  display: none;
 }
 
 /* Display Header text */
@@ -9,7 +9,8 @@ h1 {
 }
 
 /* Breadcrumbs & Navbar */
-.toolbar, .nav {
+.toolbar,
+.nav {
   background: rgb(195, 239, 192);
 }
 
@@ -30,9 +31,10 @@ img {
   margin-right: auto;
 }
 
-
 /* Table styling */
-table, th, td {
+table,
+th,
+td {
   vertical-align: top;
   border: 1px solid black;
   padding: 5px;
@@ -55,4 +57,3 @@ pre {
   font-weight: bold;
   border: 5px solid #ddd;
 }
-
