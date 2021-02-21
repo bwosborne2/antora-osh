@@ -6,3 +6,4 @@ site
 site/**
 target
 target/**
+package-lock.json
